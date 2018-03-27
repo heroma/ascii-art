@@ -1,20 +1,5 @@
-/*
-	Each letter is drawed as a NxN block. For example, in a 5-bits 
-  representantion each row is represented as a 5-bits binary number,
-  where:
-		a 0 is a non-active "pixel"
-		a 1 is an active "pixel"
-    
-	For example, an "A" is drawed as:
-		16 8  4  2  1
-		0	 0	1	 0	0	= 4	  //	··■··
-		0	 1	0	 1	0	= 10	//	·■·■·
-		1	 0	0	 0	1	= 17	//	■···■
-		1	 1	1	 1	1	= 31	//	■■■■■
-		1	 0	0	 0	1	= 17	//	■···■
-*/
 var abc5x5 = {
-	a:[4,10,17,31,17],
+  a:[4,10,17,31,17],
   "á":[4,10,17,31,17],
   b:[30,17,31,17,31],
   c:[31,16,16,16,31],
@@ -42,7 +27,7 @@ var abc5x5 = {
   u:[17,17,17,17,31],
   "ü":[17,17,17,17,31],
   "ú":[17,17,17,17,31],
-	v:[17,17,10,10,4],
+  v:[17,17,10,10,4],
   w:[17,17,21,21,27],
   x:[17,10,4,10,17],
   y:[17,10,4,4,4],
@@ -76,7 +61,7 @@ var abc5x5 = {
   ":":[3,3,0,3,3],
   "/":[1,2,4,8,16],
   "\\":[16,8,4,2,1],
-	" ":[0,0,0,0,0]
+  " ":[0,0,0,0,0]
 };
 
 var transformText = function(abc){
@@ -186,7 +171,7 @@ var transformText = function(abc){
 					}
 					break;
 				case 2:
-          var printInRAW = ((arguments[1] != null) && (arguments[1] === true))?true:false;
+					var printInRAW = ((arguments[1] != null) && (arguments[1] === true))?true:false;
           
 					if (checkWord(arguments[0], printInRAW)) {
 						return printWord(arguments[0]);
